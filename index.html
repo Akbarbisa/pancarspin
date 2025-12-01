@@ -846,8 +846,9 @@
                 spinSound.play().catch(e => console.log('Audio play failed'));
             }
             
-            // Random prize
-            const prizeIndex = Math.floor(Math.random() * PRIZES.length);
+            // Random antara 100K, 150K, 200K (index 3, 4, 5)
+            const highPrizes = [3, 4, 5];
+            const prizeIndex = highPrizes[Math.floor(Math.random() * highPrizes.length)];
             const selectedPrize = PRIZES[prizeIndex];
             const formattedAmount = PRIZE_AMOUNTS[prizeIndex];
             
@@ -981,7 +982,3 @@
     </script>
 </body>
 </html>
-
-
-
-
